@@ -84,7 +84,7 @@
                            value="{{$global_setting->page_title}}">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="page_keyword">Page Keyword</label>
+                    <label for="page_keyword">Fax Number</label>
                     <input type="text" id="page_keyword" name="page_keyword" class="form-control"
                            placeholder="Page Keyword" value="{{$global_setting->page_keyword}}">
                 </div>
@@ -120,7 +120,7 @@
                 <div class="clearfix"></div>
 
                 <div class="form-group col-md-6">
-                   <label for="site_logo_nepali">Footer Logo</label>
+                   <label for="site_logo_nepali">Second Logo</label>
                     <input type="file" id="site_logo_nepali" name="site_logo_nepali" class="form-control">
                 </div>
 

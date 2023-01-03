@@ -2,7 +2,7 @@
 
 @section('content')
     @include('website.slider')
-    @include('website.aboutus')
+    @include('website.aboutone')
     @include('website.ourservices')
     @include('website.ourteam')
     @include('website.newsandupdates')

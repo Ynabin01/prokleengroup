@@ -1,105 +1,99 @@
-
-
 @extends('layouts.master')
 @section('content')
-    <!-- Breadcrumb area Start -->
-    <section class="page-title-area bg-image ptb--80" data-bg-image="/website/images/page-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="page-title">Contact Us</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="/">Home</a></li>
-                        <li class="current"><span>Contact Us</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Breadcrumb area End -->
 
 
-    <main class="main-content-wrapper">
-        <div class="inner-page-content">
-            <!-- Contact Area Start -->
-            <section class="contact-area ptb--60">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-5 mb-md--50">
-                            <div class="heading mb--42">
-                                <h2>Get In Touch</h2>
-                                <hr class="delimeter">
-                            </div>
-                            <div class="contact-info mb--30">
-                                <p><i class="fa fa-map-marker"></i>{{ $global_setting->website_full_address }} </p>
-                                <p><i class="fa fa-phone"></i> <a
-                                        href="tel:{{ $global_setting->phone }}">{{ $global_setting->phone }}</a>, <a
-                                        href="tel:{{ $global_setting->phone_ne }}">{{ $global_setting->phone_ne }}</a></p>
-                                <p><i class="fa fa-envelope"></i> <a
-                                        href="mailto:{{ $global_setting->site_email }}">{{ $global_setting->site_email }}</a>
-                                </p>
-                                <p><i class="fa fa-envelope"></i> <a
-                                        href="mailto:{{ $global_setting->page_description }}">{{ $global_setting->page_description }}</a>
-                                </p>
-                            </div>
-                            <ul class="social social-outline">
-                                <li class="social__item">
-                                    <a href="{{ $global_setting->facebook ?? '' }}" class="social__link" target="_blank">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="{{ $global_setting->extra_one ?? '' }}" class="social__link" target="_blank">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="{{ $global_setting->twitter ?? '' }}" class="social__link" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="{{ $global_setting->linkedin ?? '' }}" class="social__link" target="_blank">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-7 offset-lg-1">
-                            <div class="heading mb--42">
-                                <h2>Contact Us</h2>
-                                <hr class="delimeter">
-                            </div>
-                            <form action="{{ route('contactstore') }}" class="form" method="post" id="contact-form"
-                                enctype='multipart/form-data'>
-                                @csrf
-                                <input type="email" name="email" id="email" class="form__input mb--30"
-                                    placeholder="Email*">
-                                <input type="text" name="first_name" id="first_name" class="form__input mb--30"
-                                    placeholder="Name*">
-                                <textarea class="form__input form__input--textarea mb--30" placeholder="Message" id="con_message" name="message"></textarea>
-                                <button type="submit" class="btn btn-shape-round form__submit">Send Request</button>
-                                <div class="form__output"></div>
+    <!--
+               =============================================
+                Theme Inner Banner
+               ==============================================
+               -->
+    <div class="theme-inner-banner section-spacing">
+        <div class="overlay">
+            <div class="container">
+                <h2>Contact Us</h2>
+            </div> <!-- /.container -->
+        </div> <!-- /.overlay -->
+    </div> <!-- /.theme-inner-banner -->
 
-                                @if (Session::has('contact'))
-                                    <p class="alert alert-info">{{ Session::get('contact') }}</p>
-                                @endif
 
-                            </form>
-                        </div>
-                    </div>
+    <!--
+                            =============================================
+                                Our Solution
+                            ==============================================
+                            -->
+    <div class="contact-us-section section-spacing">
+        <div class="container">
+            <div class="theme-title-one">
+                <h2>GET IN TOUCH</h2>
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dignissimos explicabo, unde dicta
+                            ut eligendi!
+                        </p> --}}
+            </div> <!-- /.theme-title-one -->
+            <div class="clearfix main-content no-gutters row">
+
+                <div class="col-lg-5 col-12">
+                    <div class="img-box"></div>
                 </div>
-            </section>
-            <!-- Contact Area End -->
+                <div class="col-lg-7 col-12">
+                    <div class="form-wrapper">
+                        <form action="{{ route('contactstore') }}" class="theme-form-one form-validation" autocomplete="off"
+                            method="post" enctype='multipart/form-data'>
+                            @csrf
+                            <div class="row">
+                                <div class="col-sm-6 col-12"><input type="text" placeholder="Name *" name="first_name">
+                                </div>
+                                <div class="col-sm-6 col-12"><input type="text" placeholder="Phone *" name="number">
+                                </div>
+                                <div class="col-sm-6 col-12"><input type="email" placeholder="Email *" name="email">
+                                </div>
+                                {{-- <div class="col-sm-6 col-12"><input type="text" placeholder="Website *" name="web">
+                                </div> --}}
+                                <div class="col-12">
+                                    <textarea placeholder="Message" name="message"></textarea>
+                                </div>
+                            </div> <!-- /.row -->
+                            <button class="theme-button-one viewAllButton">SEND MESSAGE</button>
+                            
+                            @if (Session::has('contact'))
+                                <p class="alert alert-info">{{ Session::get('contact') }}</p>
+                            @endif
+                        </form>
+                    </div> <!-- /.form-wrapper -->
+                </div> <!-- /.col- -->
+            </div> <!-- /.main-content -->
+        </div> <!-- /.container -->
 
-            <!-- Google Map Area Start -->
-            <!-- Google Map -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.845659969248!2d85.31929851541567!3d27.722051231451736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1919f7dd0685%3A0xc59baa0caae9c83d!2sLazimpat%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1670754752618!5m2!1sen!2snp"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <!-- Google Map Area End -->
-        </div>
-       
-    </main>
+        <!--Contact Form Validation Markup -->
+        <!-- Contact alert -->
+        <div class="alert-wrapper" id="alert-success">
+            <div id="success">
+                <button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <div class="wrapper">
+                    <p>Your message was sent successfully.</p>
+                </div>
+            </div>
+        </div> <!-- End of .alert_wrapper -->
+        <div class="alert-wrapper" id="alert-error">
+            <div id="error">
+                <button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <div class="wrapper">
+                    <p>Sorry!Something Went Wrong.</p>
+                </div>
+            </div>
+        </div> <!-- End of .alert_wrapper -->
+    </div> <!-- /.contact-us-section -->
+    <!-- /.our-case -->
+
+
+
+    <div class="map-canvas">
+    </div>
+
+    <div class="map-loaction">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.8848484966197!2d85.32761721546603!3d27.720841431504795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907b0522ead%3A0x392af32fe87dd0ea!2sRadiant%20Infotech%20Nepal%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1658659292018!5m2!1sen!2snp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 @endsection
