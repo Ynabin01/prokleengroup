@@ -9,7 +9,7 @@
                             <div class="quote-form">
                                 <img src="{{ $serv->banner_image ?? '' }}" alt="">
                             </div>
-                        </div>
+                        </div> 
                         <div class="col-lg-7 col-12  ">
                             <div class="homeServicesData">
 

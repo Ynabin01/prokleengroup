@@ -30,13 +30,13 @@ class HomeController extends Controller
         else{
             $About = null;
         }
-       if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%about%")->where('page_type','Group')->latest()->first()!=null){
-            $about_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%about%")->where('page_type','Group')->latest()->first()->id;
-            $About = Navigation::query()->where('parent_page_id',$about_id)->latest()->first();
-        }
-        else{
-            $About = null;
-        }
+    //    if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%about%")->where('page_type','Group')->latest()->first()!=null){
+    //         $about_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%about%")->where('page_type','Group')->latest()->first()->id;
+    //         $About = Navigation::query()->where('parent_page_id',$about_id)->latest()->first();
+    //     }
+    //     else{
+    //         $About = null;
+    //     }
       
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%banner%")->where('page_type','Group')->latest()->first()!=null){
             $banner_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%banner%")->where('page_type','Group')->latest()->first()->id;

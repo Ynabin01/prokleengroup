@@ -235,34 +235,34 @@
                                 <div class="wrapper">
                                     <div class="row">
                                         <div class="col-4">
-                                            <a href="website/images/gallery/gallery-1.jpg" data-fancybox="gallery"
+                                            <a href="/website/images/gallery/gallery-1.jpg" data-fancybox="gallery"
                                                 data-caption="Caption for single image" class="fancybox"><img
                                                     src="website/images/gallery/gallery-1.jpg" alt=""></a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="website/images/gallery/gallery-2.jpg" data-fancybox="gallery"
+                                            <a href="/website/images/gallery/gallery-2.jpg" data-fancybox="gallery"
                                                 data-caption="Caption for single image" class="fancybox"><img
-                                                    src="website/images/gallery/gallery-2.jpg" alt=""></a>
+                                                    src="/website/images/gallery/gallery-2.jpg" alt=""></a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="website/images/gallery/gallery-4.jpg" data-fancybox="gallery"
+                                            <a href="/website/images/gallery/gallery-4.jpg" data-fancybox="gallery"
                                                 data-caption="Caption for single image" class="fancybox"><img
-                                                    src="website/images/gallery/gallery-4.jpg" alt=""></a>
+                                                    src="/ebsite/images/gallery/gallery-4.jpg" alt=""></a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="website/images//gallery/gallery-5.jpg" data-fancybox="gallery"
+                                            <a href="/website/images//gallery/gallery-5.jpg" data-fancybox="gallery"
                                                 data-caption="Caption for single image" class="fancybox"><img
                                                     src="website/images//gallery/gallery-5.jpg" alt=""></a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="website/images//gallery/gallery-6.jpg" data-fancybox="gallery"
+                                            <a href="/website/images//gallery/gallery-6.jpg" data-fancybox="gallery"
                                                 data-caption="Caption for single image" class="fancybox"><img
                                                     src="website/images//gallery/gallery-6.jpg" alt=""></a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="website/images/gallery/gallery-7.jpg" data-fancybox="gallery"
+                                            <a href="/website/images/gallery/gallery-7.jpg" data-fancybox="gallery"
                                                 data-caption="Caption for single image" class="fancybox"><img
-                                                    src="website/images/gallery/gallery-7.jpg" alt=""></a>
+                                                    src="/website/images/gallery/gallery-7.jpg" alt=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -319,30 +319,30 @@
 
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <!-- jQuery -->
-            <script src="website/vendor/jquery.2.2.3.min.js"></script>
+            <script src="/website/vendor/jquery.2.2.3.min.js"></script>
             <!-- Popper js -->
-            <script src="website/vendor/popper.js/popper.min.js"></script>
+            <script src="/website/vendor/popper.js/popper.min.js"></script>
             <!-- Bootstrap JS -->
-            <script src="website/vendor/bootstrap/js/bootstrap.min.js"></script>
+            <script src="/website/vendor/bootstrap/js/bootstrap.min.js"></script>
             <!-- Camera Slider -->
-            <script src='website/vendor/Camera-master/scripts/jquery.mobile.customized.min.js'></script>
-            <script src='website/vendor/Camera-master/scripts/jquery.easing.1.3.js'></script>
-            <script src='website/vendor/Camera-master/scripts/camera.min.js'></script>
+            <script src='/website/vendor/Camera-master/scripts/jquery.mobile.customized.min.js'></script>
+            <script src='/website/vendor/Camera-master/scripts/jquery.easing.1.3.js'></script>
+            <script src='/website/vendor/Camera-master/scripts/camera.min.js'></script>
             <!-- menu  -->
-            <script src="website/vendor/menu/src/js/jquery.slimmenu.js"></script>
+            <script src="/website/vendor/menu/src/js/jquery.slimmenu.js"></script>
             <!-- WOW js -->
-            <script src="website/vendor/WOW-master/dist/wow.min.js"></script>
+            <script src="/website/vendor/WOW-master/dist/wow.min.js"></script>
             <!-- owl.carousel -->
-            <script src="website/vendor/owl-carousel/owl.carousel.min.js"></script>
-            <script src="website/js/slider-main.js"></script>
+            <script src="/website/vendor/owl-carousel/owl.carousel.min.js"></script>
+            <script src="/website/js/slider-main.js"></script>
             <!-- js count to -->
-            <script src="website/vendor/jquery.appear.js"></script>
-            <script src="website/vendor/jquery.countTo.js"></script>
+            <script src="/website/vendor/jquery.appear.js"></script>
+            <script src="/website/vendor/jquery.countTo.js"></script>
             <!-- Fancybox -->
-            <script src="website/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+            <script src="/website/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
 
             <!-- Theme js -->
-            <script src="website/js/theme.js"></script>
+            <script src="/website/js/theme.js"></script>
 
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
