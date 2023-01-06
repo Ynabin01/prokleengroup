@@ -224,10 +224,10 @@
                             <div class="col-lg-2 col-sm-6 col-12 footer-list">
                                 <h6 class="title">EXPLORE</h6>
                                 <ul>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="who-we-are.html">Who Are We ?</a></li>
-                                    <li><a href="service.html">Our Services</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="/about-one">About us</a></li>
+                                    <li><a href="/who-we-are">Who Are We ?</a></li>
+                                    <li><a href="/service">Our Services</a></li>
+                                    <li><a href="/contact">Contact us</a></li>
                                 </ul>
                             </div> <!-- /.footer-list -->
                             <div class="col-lg-3 col-sm-6 col-12 footer-gallery">
