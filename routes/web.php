@@ -99,6 +99,7 @@ Route::get('gallery-view/{slug}',[HomeController::class,"GotoGallery"])->name('G
 
 
 
+Route::get('/normal/{slug}',[HomeController::class,"ReadMore"])->name('normal');
 Route::get('/joblist/{category_slug}',[HomeController::class,"getJobListWithCategory"])->name('JobList');
 Route::get('view-all',[HomeController::class,"viewAll"])->name('viewall');
 Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');

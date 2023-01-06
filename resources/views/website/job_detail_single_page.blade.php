@@ -33,4 +33,3 @@
         </div> <!-- /.overlay -->
     </div> <!-- /.about-compnay-two -->
 @endsection
-
