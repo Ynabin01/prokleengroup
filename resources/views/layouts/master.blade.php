@@ -152,11 +152,36 @@
 
                                         <li>
                                             <div class="selectLanguage">
-                                                <label for="">Language</label>
+                                                {{-- <label for="">Language</label>
                                                 <select name="" id="">
                                                     <option value="">English</option>
                                                     <option value="">Arabic</option>
-                                                </select>
+                                                </select> --}}
+                                                <div id="google_element"></div>
+                                                <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                                                <script>
+                                                    function loadGoogleTranslate() {
+                                                        new google.translate.TranslateElement('google_element');
+                                                    }
+                                                </script>
+
+                                                <style>
+                                                    #google_element span {
+                                                        display: none;
+                                                    }
+
+                                                    .skiptranslate {
+                                                        font-size: 0;
+                                                    }
+
+                                                    .skiptranslate div {
+                                                        font-size: 16px;
+                                                    }
+
+                                                    .goog-te-combo {
+                                                        padding: 6px;
+                                                    }
+                                                </style>
                                             </div>
                                         </li>
                                     </ul>
@@ -183,9 +208,6 @@
             {{-- statistics --}}
 
             {{-- clients --}}
-
-
-
             <!-- Google Map -->
             <div class="map-canvas">
             </div>

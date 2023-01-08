@@ -1,65 +1,23 @@
- {{-- <div class="branch-address">
+<div class="branch-address">
     <div class="container">
-
         <div class="row">
+            <div class="wrapper">
+                <div class="bg">
 
-            <div class="address-slider">
-
-                <div class="item">
-                    @if (isset($partners))
-                        @foreach ($partners as $partner)
-                            <div class="wrapper ourClient_img">
-                                <img src="{{ $partner->banner_image }}" alt="">
-                            </div> 
+                    <div class="testimonial-sliderr">
+                        @if (isset($partners))
+                            @foreach ($partners as $partner)
+                                <div class="item">
+                                    <div class="wrapper ourClient_img">
+                                        <img src="{{ $partner->banner_image }}" alt="">
+                                    </div> <!-- /.wrapper -->
+                                </div> <!-- /.item -->
                             @endforeach
-                            @endif
-                </div>
+                        @endif
 
-            </div> 
-
-        </div>
-
-    </div>
-</div>   
- --}}
-
- <div class="branch-address">
-    <div class="container">
-        <div class="row">
-            <div class="address-slider">
-                <div class="item">
-                    <div class="wrapper ourClient_img">
-                        <img src="images/ourClient/19.jpg" alt="">
-                    </div> <!-- /.wrapper -->
-                </div>
-
-                <div class="item">
-                    <div class="wrapper ourClient_img">
-                        <img src="images/ourClient/12.jpg" alt="">
-                    </div> <!-- /.wrapper -->
-                </div>
-                <div class="item">
-                    <div class="wrapper ourClient_img">
-                        <img src="images/ourClient/18.jpg" alt="">
-                    </div> <!-- /.wrapper -->
-                </div>
-                <div class="item">
-                    <div class="wrapper ourClient_img">
-                        <img src="images/ourClient/18.jpg" alt="">
-                    </div> <!-- /.wrapper -->
-                </div>
-                <div class="item">
-                    <div class="wrapper ourClient_img">
-                        <img src="images/ourClient/19.jpg" alt="">
-                    </div> <!-- /.wrapper -->
-                </div>
-                <div class="item">
-                    <div class="wrapper ourClient_img">
-                        <img src="images/ourClient/1.jpg" alt="">
-                    </div> <!-- /.wrapper -->
-                </div>
-
-            </div> <!-- /.address-slider -->
+                    </div> <!-- /.testimonial-slider -->
+                </div> <!-- /.bg -->
+            </div>
         </div>
     </div> <!-- /.container -->
 </div> <!-- /.branch-address -->
