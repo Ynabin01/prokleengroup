@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12 order-lg-first">
-                        <img src="{{ $normal->banner_image }}" alt="" class="left-img">
+                        <img src="{{ $normal->banner_image ?? '' }}" alt="" class="left-img">
                     </div>
                     <div class="col-lg-6 col-12 text order-lg-last">
                         <div class="theme-title-one">
