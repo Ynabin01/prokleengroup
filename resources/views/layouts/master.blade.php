@@ -130,7 +130,8 @@
                                         {{-- <li class="active"><a href="/">Home</a> --}}
                                         </li>
                                         @foreach ($menus as $menu)
-                                            <li><a href="/">{{ $menu->caption }}</a>
+                                    
+                                            <li><a href="{{$menu->nav_name}}">{{ $menu->caption }}</a>
                                                 @if ($menu->childs->count() > 0)
                                                     <ul class="dropdown">
                                                         @foreach ($menu->childs as $submenu)
@@ -149,7 +150,6 @@
                                         </li>
 
                                         <li><a href="/contact">contact</a></li>
-
                                         <li>
                                             <div class="selectLanguage">
                                                 {{-- <label for="">Language</label>

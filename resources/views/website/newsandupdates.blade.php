@@ -24,7 +24,7 @@
                                 </div> <!-- /.text -->
                             </div> <!-- /.single-service -->
                        
-                </div> <!-- /.col- -->
+                </div> <!-- /.col- --> 
                 @endforeach
                 @endif
             </div> <!-- /.row -->

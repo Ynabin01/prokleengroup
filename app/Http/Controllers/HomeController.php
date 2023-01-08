@@ -217,7 +217,7 @@ class HomeController extends Controller
             $category_type = null;
         }
    
-    
+        // return $category_type;
 
         if($category_type == "Photo Gallery"){
             //return "return to page gallary";
@@ -241,6 +241,12 @@ class HomeController extends Controller
             //return $category_id;
             $normal = Navigation::find($category_id);
             return view("website.normal")->with(['normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug1'=>$slug1]);
+        }
+        elseif($category_type == "Group Jobcategory"){
+            //return "return to job else";
+            $job_categories = Navigation::query()->where('parent_page_id',$category_id)->get();
+            #return $job_categories;
+            return view("website.service")->with(['job_categories'=>$job_categories,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail,'slug1'=>$slug1]);
         }
        
         elseif($category_type == "Group Jobs"){
@@ -362,7 +368,7 @@ class HomeController extends Controller
                         
                         return view("website.job-list")->with(['jobs'=>Job::all(),'slug1'=>$slug1,'slug2'=>$slug2]);
                     }
-                    return "Sad";
+              
                     return redirect('/');//submenu is page_type=Group and its internal items are empty
                 }
             }
