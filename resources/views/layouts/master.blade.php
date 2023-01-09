@@ -22,7 +22,7 @@
     }
     
     $gallery = App\Models\NavigationItems::query()
-        ->where('navigation_id', '2522')
+        ->where('navigation_id', '2547')
         ->orderBy('created_at', 'ASC')
         ->get();
     
