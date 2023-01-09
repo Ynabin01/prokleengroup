@@ -21,7 +21,13 @@
         $seo = $job;
     }
     
+    $gallery = App\Models\NavigationItems::query()
+        ->where('navigation_id', '2522')
+        ->orderBy('created_at', 'ASC')
+        ->get();
+    
 @endphp
+
 
 
 <!DOCTYPE html>
@@ -130,17 +136,19 @@
                                         {{-- <li class="active"><a href="/">Home</a> --}}
                                         </li>
                                         @foreach ($menus as $menu)
-                                    
-                                            <li><a href="{{$menu->nav_name}}">{{ $menu->caption }}</a>
-                                                @if ($menu->nav_name != "service" )                                                    
-                                                    @if ($menu->childs->count() > 0 )
-                                                        <ul class="dropdown">
-                                                            @foreach ($menu->childs as $submenu)
-                                                            <li><a
-                                                                href="{{ $menu->nav_name }}/{{ $submenu->nav_name }}">{{ $submenu->caption }}</a>
-                                                            </li>
-                                                            @endforeach
-                                                        </ul>
+
+                                            <li><a href="{{ $menu->nav_name }}">{{ $menu->caption }}</a>
+                                                @if ($menu->nav_name != 'service')
+                                                    @if ($menu->nav_name != 'gallery')
+                                                        @if ($menu->childs->count() > 0)
+                                                            <ul class="dropdown">
+                                                                @foreach ($menu->childs as $submenu)
+                                                                    <li><a
+                                                                            href="{{ $menu->nav_name }}/{{ $submenu->nav_name }}">{{ $submenu->caption }}</a>
+                                                                    </li>
+                                                                @endforeach
+                                                            </ul>
+                                                        @endif
                                                     @endif
                                                 @endif
                                             </li>
@@ -210,6 +218,7 @@
             {{-- statistics --}}
 
             {{-- clients --}}
+            
             <!-- Google Map -->
             <div class="map-canvas">
             </div>
@@ -258,36 +267,14 @@
                                 <h6 class="title">Gallery</h6>
                                 <div class="wrapper">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <a href="/website/images/gallery/gallery-1.jpg" data-fancybox="gallery"
-                                                data-caption="Caption for single image" class="fancybox"><img
-                                                    src="website/images/gallery/gallery-1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="/website/images/gallery/gallery-2.jpg" data-fancybox="gallery"
-                                                data-caption="Caption for single image" class="fancybox"><img
-                                                    src="/website/images/gallery/gallery-2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="/website/images/gallery/gallery-4.jpg" data-fancybox="gallery"
-                                                data-caption="Caption for single image" class="fancybox"><img
-                                                    src="/ebsite/images/gallery/gallery-4.jpg" alt=""></a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="/website/images//gallery/gallery-5.jpg" data-fancybox="gallery"
-                                                data-caption="Caption for single image" class="fancybox"><img
-                                                    src="website/images//gallery/gallery-5.jpg" alt=""></a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="/website/images//gallery/gallery-6.jpg" data-fancybox="gallery"
-                                                data-caption="Caption for single image" class="fancybox"><img
-                                                    src="website/images//gallery/gallery-6.jpg" alt=""></a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="/website/images/gallery/gallery-7.jpg" data-fancybox="gallery"
-                                                data-caption="Caption for single image" class="fancybox"><img
-                                                    src="/website/images/gallery/gallery-7.jpg" alt=""></a>
-                                        </div>
+                                        @foreach ($gallery as $photo)
+                                            <div class="col-4">
+                                                <a href="/uploads/photo_gallery/{{ $photo->file }}"
+                                                    data-fancybox="gallery" data-caption="Caption for single image"
+                                                    class="fancybox"><img src="/uploads/photo_gallery/{{ $photo->file }}"
+                                                        alt=""></a>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div> <!-- /.footer-gallery -->
