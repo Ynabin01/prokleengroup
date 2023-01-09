@@ -132,14 +132,16 @@
                                         @foreach ($menus as $menu)
                                     
                                             <li><a href="{{$menu->nav_name}}">{{ $menu->caption }}</a>
-                                                @if ($menu->childs->count() > 0)
-                                                    <ul class="dropdown">
-                                                        @foreach ($menu->childs as $submenu)
+                                                @if ($menu->nav_name != "service" )                                                    
+                                                    @if ($menu->childs->count() > 0 )
+                                                        <ul class="dropdown">
+                                                            @foreach ($menu->childs as $submenu)
                                                             <li><a
-                                                                    href="{{ $menu->nav_name }}/{{ $submenu->nav_name }}">{{ $submenu->caption }}</a>
+                                                                href="{{ $menu->nav_name }}/{{ $submenu->nav_name }}">{{ $submenu->caption }}</a>
                                                             </li>
-                                                        @endforeach
-                                                    </ul>
+                                                            @endforeach
+                                                        </ul>
+                                                    @endif
                                                 @endif
                                             </li>
                                         @endforeach
