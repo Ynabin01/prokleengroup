@@ -18,7 +18,7 @@
                                     <p>{{ $news->short_content ?? '' }}</p>
                                     {{-- <p>{{$news->childs()->first()->nav_name}}</p> --}}
                                     @if (isset($news->childs()->first()->id))
-                                    <a href="{{ route('normal', ['slug'=>$news->childs()->first()->id]) }}" class="read-more">READ MORE <i class="fa fa-angle-right"
+                                    <a href="/{{ route('normal', ['slug'=>$news->childs()->first()->id]) }}" class="read-more">READ MORE <i class="fa fa-angle-right"
                                             aria-hidden="true"></i></a>                                        
                                     @endif
                                 </div> <!-- /.text -->

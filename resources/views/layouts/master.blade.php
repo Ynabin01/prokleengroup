@@ -117,6 +117,7 @@
                                 </a>
                             </div>
                             <div id="date-time"></div>
+                            
                             <script>
                                 // Function to format 1 in 01
                                 const zeroFill = n => {
@@ -127,11 +128,14 @@
                                 const interval = setInterval(() => {
                                     // Get current time
                                     const now = new Date();
-
+                                    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                                    var d_num = now.getDay();
+                                    var a = days[d_num]
+                                   
                                     // Format date as in mm/dd/aaaa hh:ii:ss
-                                    const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now
+                                    const dateTime = a + ' ' + zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now
                                         .getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(
-                                            now.getSeconds());
+                                            now.getSeconds()); 
 
                                     // Display the date and time on the screen using div#date-time
                                     document.getElementById('date-time').innerHTML = dateTime;
@@ -160,14 +164,14 @@
                                         </li>
                                         @foreach ($menus as $menu)
 
-                                            <li><a href="{{ $menu->nav_name }}">{{ $menu->caption }}</a>
+                                            <li><a href="/{{ $menu->nav_name }}">{{ $menu->caption }}</a>
                                                 @if ($menu->nav_name != 'service')
                                                     @if ($menu->nav_name != 'gallery')
                                                         @if ($menu->childs->count() > 0)
                                                             <ul class="dropdown">
                                                                 @foreach ($menu->childs as $submenu)
                                                                     <li><a
-                                                                            href="{{ $menu->nav_name }}/{{ $submenu->nav_name }}">{{ $submenu->caption }}</a>
+                                                                            href="/{{ $menu->nav_name }}/{{ $submenu->nav_name }}">{{ $submenu->caption }}</a>
                                                                     </li>
                                                                 @endforeach
                                                             </ul>
