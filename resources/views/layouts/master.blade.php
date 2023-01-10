@@ -116,6 +116,29 @@
                                     <img src="/uploads/icons/{{ $global_setting->site_logo }}" alt="companyLogo">
                                 </a>
                             </div>
+                            <div id="date-time"></div>
+                            <script>
+                                // Function to format 1 in 01
+                                const zeroFill = n => {
+                                    return ('0' + n).slice(-2);
+                                }
+
+                                // Creates interval
+                                const interval = setInterval(() => {
+                                    // Get current time
+                                    const now = new Date();
+
+                                    // Format date as in mm/dd/aaaa hh:ii:ss
+                                    const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now
+                                        .getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(
+                                            now.getSeconds());
+
+                                    // Display the date and time on the screen using div#date-time
+                                    document.getElementById('date-time').innerHTML = dateTime;
+                                }, 1000);
+                            </script>
+                            
+
                             <div class="logoImg">
                                 <a href="/">
                                     <img src="/uploads/icons/{{ $global_setting->site_logo_nepali }}"
@@ -218,7 +241,7 @@
             {{-- statistics --}}
 
             {{-- clients --}}
-            
+
             <!-- Google Map -->
             <div class="map-canvas">
             </div>
@@ -271,7 +294,8 @@
                                             <div class="col-4">
                                                 <a href="/uploads/photo_gallery/{{ $photo->file }}"
                                                     data-fancybox="gallery" data-caption="Caption for single image"
-                                                    class="fancybox"><img src="/uploads/photo_gallery/{{ $photo->file }}"
+                                                    class="fancybox"><img
+                                                        src="/uploads/photo_gallery/{{ $photo->file }}"
                                                         alt=""></a>
                                             </div>
                                         @endforeach
