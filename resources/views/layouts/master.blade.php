@@ -115,6 +115,7 @@
                                 <a href="/">
                                     <img src="/uploads/icons/{{ $global_setting->site_logo }}" alt="companyLogo">
                                 </a>
+                                <span> <div id="date-time"></div></span>
                             </div>
                             <div id="date-time"></div>
                             

@@ -231,4 +231,7 @@
   height: 25px;
   object-fit: contain;
  }
+ .theme-menu-wrapper{
+  background-color: #672603;
+ }
 }
