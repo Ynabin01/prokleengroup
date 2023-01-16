@@ -9,7 +9,7 @@
                         @foreach ($statistics as $statistic)
                             <div class="col-md-3 col-6">
                                 <div class="single-counter-box">
-                                    <div class="number"><span class="timer" data-from="0" data-to="30"
+                                    <div class="number"><span class="timer" data-from="0" data-to="{{ $statistic->caption }}"
                                             data-speed="1200"
                                             data-refresh-interval="5">{{ $statistic->caption }}</span>{{ $statistic->short_content }}
                                     </div>
