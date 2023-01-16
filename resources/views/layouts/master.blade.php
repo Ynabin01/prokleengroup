@@ -115,10 +115,12 @@
                                 <a href="/">
                                     <img src="/uploads/icons/{{ $global_setting->site_logo }}" alt="companyLogo">
                                 </a>
-                                <span> <div id="date-time"></div></span>
+                                <span>
+                                    <div id="date-time"></div>
+                                </span>
                             </div>
                             <div id="date-time"></div>
-                            
+
                             <script>
                                 // Function to format 1 in 01
                                 const zeroFill = n => {
@@ -132,17 +134,17 @@
                                     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
                                     var d_num = now.getDay();
                                     var a = days[d_num]
-                                   
+
                                     // Format date as in mm/dd/aaaa hh:ii:ss
                                     const dateTime = a + ' ' + zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now
                                         .getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(
-                                            now.getSeconds()); 
+                                            now.getSeconds());
 
                                     // Display the date and time on the screen using div#date-time
                                     document.getElementById('date-time').innerHTML = dateTime;
                                 }, 1000);
                             </script>
-                            
+
 
                             <div class="logoImg">
                                 <a href="/">
@@ -270,6 +272,9 @@
                             <div class="col-lg-4 col-sm-6 col-12 logo-widget">
                                 <div class="logo"><a href="/"><img
                                             src="/uploads/icons/{{ $global_setting->site_logo }}" alt=""></a>
+                                </div>
+                                <div class="logo"><a href="/"><img
+                                            src="/uploads/icons/{{ $global_setting->site_logo_nepali }}" alt=""></a>
                                 </div>
                                 <p>{{ $global_setting->page_description }}</p>
                                 <ul class="social-icon">
