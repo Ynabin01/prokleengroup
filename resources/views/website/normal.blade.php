@@ -22,7 +22,8 @@
                     <div class="col-lg-6 col-12 order-lg-first">
                         <img src="{{ $normal->banner_image }}" alt="" class="left-img">
                     </div>
-                    <div class="col-lg-6 col-12 text order-lg-last">
+                    
+                    <div class="@if($normal->banner_image == '') col-lg-12 col-12 @else col-lg-6 col-12 @endif text order-lg-last">
                         <div class="theme-title-one">
                             <h2>@php echo $normal->caption; @endphp</h2>
                         </div> <!-- /.theme-title-one -->
