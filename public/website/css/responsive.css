@@ -22,7 +22,7 @@
   .header-one .theme-menu-wrapper .bg-wrapper {padding-left: 15px;}
   .theme-menu-wrapper .right-widget .cart-icon {margin-left: 15px;}
   .testimonial-section .wrapper {width: 65%;}
-  .header-two .theme-menu-wrapper .bg-wrapper {padding-left: 215px;}
+  .header-two .theme-menu-wrapper .bg-wrapper {padding-left: 0px;}
   .callout-banner p {width: 52%;}
   .callout-banner .theme-button-one {margin-top: 40px;}
   .our-solution .single-solution-block p {padding: 0;}
@@ -68,8 +68,8 @@
   .header-two .theme-menu-wrapper .bg-wrapper {padding-left: 0;}
   .header-two .theme-menu-wrapper .right-widget ul li {line-height: 70px;}
   .header-two .theme-menu-wrapper .right-widget .cart-icon a span {top:20px;}
-  .header-two .collapse-button .icon-bar {background: white;}
-  .header-two .menu-collapser {margin: 22px 0;}
+  .header-two .collapse-button .icon-bar {background-color: #672603 !important}
+  .header-two .menu-collapser {margin: -30px 0px 6px 0px;}
   .header-two #mega-menu-holder>ul> li> a {padding-top: 0;padding-bottom: 0;}
   .header-two #mega-menu-holder li .sub-toggle {line-height: 40px;}
   .callout-banner,.callout-banner.no-bg .title {text-align: center;}
@@ -78,7 +78,10 @@
   .callout-banner p:before {display: none;}
   .callout-banner .theme-button-one {float: none;}
   .about-compnay-two .overlay,.core-values {padding: 60px 0;}
-  .about-compnay-two .quote-form {margin-top: 40px;}
+  .about-compnay-two .quote-form {margin-top: 40px; padding: 0px 0px 0px 0px;}
+  .quote-form{
+       padding: 0px 0px 0px 0px;
+  }
   .faq-section,.faq-section .overlay,.why-we-best,.why-we-best .overlay {height: auto;}
   .faq-section .overlay,.why-we-best .overlay {padding: 60px 0;}
   .faq-section .wrapper .img-box,.why-we-best .wrapper .img-box,.contact-us-section .img-box {height: 250px;border-radius: 5px 5px 0 0;}
@@ -113,7 +116,7 @@
   .theme-footer-one .bottom-footer,.theme-footer-one .bottom-footer ul {text-align: center;}
   .theme-footer-one .bottom-footer ul li a {margin: 2px 10px;}
   .our-solution .single-solution-block p {padding: 0;}
-  .about-compnay-two .text p {padding-right: 0;}
+  .about-compnay-two .text p {padding: 0px 15px 0px 15px;}
   .faq-section .wrapper .faq-content {padding: 40px 15px;}
   .short-banner .overlay h2 {font-size: 38px;}
   .google-map-one {height: 250px;}
@@ -131,6 +134,16 @@
   .google-map-two {height: 300px;}
   #theme-main-banner .camera_caption h1 br {display: none;}
   .error-page input {width: 100%;margin-top: 20px;}
+  .about-compnay-two .theme-title-one {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .about-compnay-two .theme-title-one h2:before{
+       left:179px;
+  }
+  .about-compnay-two a {
+    margin-left: 15px;
+}
 }
 /*(max-width: 767px)*/
 
@@ -150,7 +163,7 @@
   .theme-menu-wrapper .right-widget .search-option .dropdown-toggle {text-align: right;width: 25px;}
   .theme-menu-wrapper .right-widget .cart-icon {width: 42px;margin-left: 10px;}
   .theme-title-one h2 {font-size: 30px;padding-bottom: 18px;}
-  .section-spacing {margin-bottom: 60px;}
+  .section-spacing {margin-bottom: 33px;}
   .about-compnay .mission-goal li h4 {font-size: 18px;}
   .about-compnay .mission-goal li .icon {font-size: 35px;}
   .feature-banner .opacity h2 {font-size: 35px;line-height: 45px;}
@@ -184,6 +197,27 @@
   #theme-main-banner {height: 400px !important;}
   #theme-main-banner .camera_caption p {font-size: 18px;}
   #theme-main-banner .camera_caption h1 {font-size: 35px;line-height: 46px;padding: 12px 0 18px 0;}
+  #date-time {
+      font-size:10px !important;
+  }
+  .about-compnay-two .quote-form{
+      padding: 0px 15px 0px 15px;
+  }
+  .quote-form{
+      padding: 0px 15px 0px 15px;
+  }
+  .homeServicesData{
+       padding: 0px 15px 0px 15px;
+  }
+  .theme-title-one{
+      padding-top: 50px;
+  }
+  .slider_title h2{
+    font-size: 14px !important;
+  }
+  .about-compnay-two .overlay{
+          padding: 0px 0px 0px 0px;
+  }
 }
 /*(max-width: 575px)*/
 
@@ -234,4 +268,8 @@
  .theme-menu-wrapper{
   background-color: #672603;
  }
+ #date-time {
+     font-size: 7px !important;
+    color: #000;
+  }
 }

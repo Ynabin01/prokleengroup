@@ -391,10 +391,11 @@ h6 a,
   text-transform: uppercase;
   border-radius: 5px;
   padding: 0 35px;
+  background: #672603 !important;
 }
 
 body .theme-button-one:hover {
-  background: #672603;
+  /*background: #672603;*/
 }
 
 /*------------------- Theme Title ------------------*/
@@ -791,7 +792,10 @@ body .theme-button-one:hover {
 }
 
 .header-two .theme-menu-wrapper.fixed {
-  background: #fff;
+  background: #672603 !important;
+}
+.clearfix{
+    background-color: #672603 !important;
 }
 
 /*---------------------------- Theme Main Banner -------------------------*/
@@ -1812,6 +1816,9 @@ body .theme-button-one:hover {
   height: 350px;
   width: 100%;
   object-fit: cover;
+}
+.quote-form{
+    padding: 25px 25px 40px 40px;
 }
 
 .services-compnay-two a {
@@ -3399,7 +3406,7 @@ body .theme-button-one:hover {
 
 
 .homeServicesData {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
 }
 
 .companySocialIcon {

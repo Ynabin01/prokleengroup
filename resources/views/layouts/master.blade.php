@@ -269,6 +269,7 @@
                 <div class="top-footer">
                     <div class="container">
                         <div class="row">
+                           
                             <div class="col-lg-4 col-sm-6 col-12 logo-widget">
                                 <div class="logo"><a href="/"><img
                                             src="/uploads/icons/{{ $global_setting->site_logo }}" alt=""></a>
