@@ -251,9 +251,9 @@
   display: flex;
   justify-content: center;
  }
- .logo img{
-  height: 40px;
- }
+ /* .logo img{
+  /* height: 40px; */
+ } */
  #theme-main-banner .camera_caption .theme-button-one{
   padding: 0px 19px 0px 19px;
   font-size: 13px;
