@@ -4,7 +4,7 @@
     @include('website.slider')
     @include('website.aboutone')
     @include('website.ourservices')
-    @include('website.ourteam')
+    {{-- @include('website.ourteam') --}}
     @include('website.newsandupdates')
     @include('website.testimonials')
     @include('website.statistics')
