@@ -80,7 +80,7 @@
 
     <title>Home- Prokleengroup</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="56x56" href="/website/images/logo/NSG LOGO.JPG">
+    <link rel="icon" type="image/png" sizes="56x56" href="/uploads/icons/{{$global_setting->favicon}}">
     <!-- Main style sheet -->
     <link rel="stylesheet" type="text/css" href="/website/css/style.css">
     <!-- responsive style sheet -->
