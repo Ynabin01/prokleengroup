@@ -34,7 +34,7 @@
             <!----------end------------>
                <!--------customized by MD------------>
              <li class="{{Request::is('admin/applied-job-list')?'active':''}}  treeview"><a
-                        href="{{url('/admin/applied-job-list')}}"><i class="fa fa-cog"></i> <span>Applied Job</span></a>
+                        href="{{url('/admin/applied-job-list')}}"><i class="fa fa-cog"></i> <span>Messages</span></a>
             </li>
             <!----------end------------>
         </ul>
